@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="XDMA_PS_DDR_xdma_0_1_synth_1" LaunchDir="C:/Users/AweisMulla/XDMA_DDR/XDMA_DDR.runs/XDMA_PS_DDR_xdma_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="XDMA_PS_DDR_auto_pc_0_synth_1" LaunchDir="C:/Users/AweisMulla/XDMA_DDR/XDMA_DDR.runs/XDMA_PS_DDR_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="XDMA_PS_DDR_auto_cc_0_synth_1" LaunchDir="C:/Users/AweisMulla/XDMA_DDR/XDMA_DDR.runs/XDMA_PS_DDR_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="XDMA_PS_DDR_rst_ps7_0_50M_0_synth_1" LaunchDir="C:/Users/AweisMulla/XDMA_DDR/XDMA_DDR.runs/XDMA_PS_DDR_rst_ps7_0_50M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="XDMA_PS_DDR_processing_system7_0_0_synth_1" LaunchDir="C:/Users/AweisMulla/XDMA_DDR/XDMA_DDR.runs/XDMA_PS_DDR_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/AweisMulla/XDMA_DDR/XDMA_DDR.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="XDMA_PS_DDR_xdma_0_1_synth_1"/>
+		<Parent Id="XDMA_PS_DDR_auto_pc_0_synth_1"/>
+		<Parent Id="XDMA_PS_DDR_auto_cc_0_synth_1"/>
+		<Parent Id="XDMA_PS_DDR_rst_ps7_0_50M_0_synth_1"/>
+		<Parent Id="XDMA_PS_DDR_processing_system7_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/AweisMulla/XDMA_DDR/XDMA_DDR.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="XDMA_PS_DDR_xdma_0_1_synth_1"/>
+		<Parent Id="XDMA_PS_DDR_auto_pc_0_synth_1"/>
+		<Parent Id="XDMA_PS_DDR_auto_cc_0_synth_1"/>
+		<Parent Id="XDMA_PS_DDR_rst_ps7_0_50M_0_synth_1"/>
+		<Parent Id="XDMA_PS_DDR_processing_system7_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
